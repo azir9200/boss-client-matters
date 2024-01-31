@@ -82,7 +82,7 @@ const RegisterUser = () => {
           </form>
           <div className="flex justify-between  mx-12">
 
-            <Link to="/login" >   <div className="text-center text-lg" >Dont have a account yet ?  <span className="font-bold text-amber-800" >Register</span> </div>  </Link>
+            <Link to="/login" >   <div className="text-center text-lg" >Already  have an account <span className="font-bold text-amber-800" >Login</span> </div>  </Link>
 
           </div>
         </div>

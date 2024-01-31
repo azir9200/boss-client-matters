@@ -16,15 +16,6 @@ const Banner = () => {
     <div className=' '>
       <Carousel>
         <div className='h-[550px]'>
-          <img src={img1} alt="image" />
-        </div>
-        <div>
-          <img src={img2} alt="image" />
-        </div>
-        <div>
-          <img src={img3} alt="image" />
-        </div>
-        <div>
           <img src={img4} alt="image" />
         </div>
         <div>
@@ -32,6 +23,15 @@ const Banner = () => {
         </div>
         <div>
           <img src={img6} alt="image" />
+        </div>
+        <div>
+          <img src={img1} alt="image" />
+        </div>
+        <div>
+          <img src={img2} alt="image" />
+        </div>
+        <div>
+          <img src={img3} alt="image" />
         </div>
 
 

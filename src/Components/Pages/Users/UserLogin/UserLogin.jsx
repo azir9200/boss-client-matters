@@ -1,11 +1,18 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from 'sweetalert2'
+import {  useLocation, useNavigate } from 'react-router-dom';
+
 
 const UserLogin = () => {
   const { userLogin } = useContext(AuthContext);
+  const [disabled, setDisabled] = useState(true);
+      const navigate = useNavigate()
+    const location = useLocation();
 
+    const from = location.state?.from?.pathname || "/";
+    console.log('state in the location login page', location.state)
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -28,7 +35,9 @@ const UserLogin = () => {
             popup: 'animate__animated animate__fadeOutUp'
           }
         });
-        // navigate(from, { replace: true });
+        
+        navigate(from, { replace: true });
+        
       })
       .then(error => {
         console.log(error);
